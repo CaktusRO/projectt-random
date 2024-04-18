@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    height: 100vh;
+    z-index: 50;
+}
+
+header {
+    height: 25%;
+    width: 100%;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+#title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+}
+
+#selectedColorString {
+    font-size: 2rem;
+    font-weight: 300;
+    color: white;
+}
+
+nav {
+    background-color: #1a75ff;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+nav a {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#tutorialButton {
+    margin-left: 20px;
+}
+
+nav a:hover {
+    background-color: white;
+    color:#1a75ff;
+    transition: 0.3s;
+    box-shadow: #1a75ff 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 50vh;
+    gap: 30px;
+}
+
+.square {
+    padding: 100px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+
+#title .correct {
+    color: green;
+}
+
+#title .fail {
+    color: red;
+}
+
+@keyframes append-animate {
+	from {
+		transform: scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;	
+	}
+}
+
+#tutorial {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgb(255, 165, 0, 0.5);
+    top: 0;
+
+}
+
+#tutorialBox {
+    width: 50%;
+    height: 40%;
+    background-color: white;
+    opacity: 1;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    animation: append-animate .3s linear;
+}
+
+
+
+#TboxDiv1 {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+
+#tutorialTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0;
+    line-height: 100%;
+}
+
+#tutorialClose {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#Texplanation1, #Texplanation2 {
+    text-align: center;
+    padding: 0 20px;
+    font-size: 1.2rem;
+}
+
+#result {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgb(255, 165, 0, 0.5);
+    top: 0;
+}
+
+#resultBox {
+    width: 30%;
+    height: 40%;
+    background-color: white;
+    opacity: 1;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: append-animate .3s linear;
+}
+
+#resultboxdiv1 {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+}
+
+#ResultTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0;
+    line-height: 100%;
+}
+
+#resultClose {  
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+#ResultBoxDiv2 {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 0 0;
+    flex-direction: column;
+}
+
+#PlayAgain {
+    margin-bottom: 20px;
+    width: 30%;
+    align-self: center;
+    margin-right: 20px;
+    background-color: white;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 20px;
+    border: 1px solid #1a75ff;
+    color: #1a75ff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#PlayAgain:hover {
+    background-color: #1a75ff;
+    color: white;
+    transition: 0.3s;
+}
+
+@media (max-width: 1130px) {
+    .square {
+        padding: 80px;
+    }
+}
+
+@media (max-width: 880px) {
+    #tutorialBox {
+        height: 50%;
+    }
+    #resultBox {
+        width: 50%;
+    }
+}
+
+@media (max-width: 695px) {
+    #tutorialBox {
+        height: 70%;
+    }
+    .square {
+        padding: 60px;
+    }
+}
+
+@media (max-width: 530px) {
+    #tutorialBox {
+        height: 80%;
+    }
+    #title {
+        font-size: 2rem;
+    }
+    #resultBox {
+        width: 70%;
+    }
+}
